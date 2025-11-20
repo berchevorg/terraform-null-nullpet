@@ -3,11 +3,11 @@ resource "random_pet" "name" {
  separator = "-"
 }
 
-#resource "null_resource" "ls" {
-  #provisioner "local-exec" {
-    #command = "ls -la"
-  #}
-  #triggers = {
-    #run_every_time = uuid()
-  #}
-#}
+resource "null_resource" "ls" {
+  provisioner "local-exec" {
+    command = "ls -la"
+  }
+  triggers = {
+    run_every_time = uuid()
+  }
+}
