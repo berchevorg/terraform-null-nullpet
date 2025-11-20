@@ -3,6 +3,7 @@ resource "random_pet" "name" {
  separator = "-"
 }
 
+# Uncomment so OPA policy will fail
 #resource "null_resource" "ls" {
   #provisioner "local-exec" {
     #command = "ls -la"
